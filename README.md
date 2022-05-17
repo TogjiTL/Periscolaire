@@ -1,21 +1,5 @@
 # Projet Périscolaire
 
-## Visual Studio Code
-### Structure des dossiers
-
-L'espace de travail contient deux dossiers par défaut :
-
-- `src` : le dossier contenant les sources
-- `lib` : le dossier contenant les dépendances
-
-Les fichiers de sorties compilés sont générés dans le dossier `bin` par défaut.
-
-> Pour personnaliser la structure des dossiers, ouvrir `.vscode/settings.json` et changer les paramètres concernés.
-
-### Gestion des dépendances
-
-La vue `JAVA PROJECTS` permet de gérer les dépendances. Plus de détails [ici](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-
 ## Commandes pour naviguer dans le terminal
 
 Pour vous rendre dans un dossier particulier, vous devez indiquer après la commande `cd` le chemin du dossier en question.
