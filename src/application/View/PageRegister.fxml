@@ -10,15 +10,15 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18">
    <children>
-      <Label layoutX="259.0" layoutY="76.0" prefHeight="57.0" prefWidth="84.0" text="Login ... ">
+      <Label layoutX="240.0" layoutY="91.0" text="Enregistrement">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="171.0" layoutY="175.0" text="Utilisateur" />
-      <Label layoutX="171.0" layoutY="245.0" text="Password" />
-      <TextField layoutX="246.0" layoutY="171.0" />
-      <Button layoutX="274.0" layoutY="306.0" mnemonicParsing="false" text="Valider" />
-      <PasswordField layoutX="246.0" layoutY="241.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label layoutX="138.0" layoutY="167.0" text="Utilisateur" />
+      <Label layoutX="139.0" layoutY="229.0" text="PassWord" />
+      <Button layoutX="275.0" layoutY="296.0" mnemonicParsing="false" text="Button" />
+      <PasswordField layoutX="240.0" layoutY="225.0" />
+      <TextField layoutX="240.0" layoutY="163.0" />
    </children>
 </AnchorPane>
