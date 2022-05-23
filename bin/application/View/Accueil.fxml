@@ -17,14 +17,8 @@
       </Label>
       <Label layoutX="171.0" layoutY="175.0" text="Utilisateur" />
       <Label layoutX="171.0" layoutY="245.0" text="Password" />
-<<<<<<< HEAD
       <TextField layoutX="246.0" layoutY="171.0" />
       <Button layoutX="274.0" layoutY="306.0" mnemonicParsing="false" text="Valider" />
       <PasswordField layoutX="246.0" layoutY="241.0" prefHeight="25.0" prefWidth="149.0" />
-=======
-      <TextField layoutX="246.0" layoutY="171.0" text="ezeef" />
-      <Button layoutX="274.0" layoutY="306.0" mnemonicParsing="false" text="Valider" />
-      <PasswordField layoutX="246.0" layoutY="241.0" prefHeight="25.0" prefWidth="149.0" text="ezfzfze" />
->>>>>>> b2086fa57a85ae1d553ba0d3f080fbc6e279e62a
    </children>
 </AnchorPane>
