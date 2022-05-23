@@ -1,21 +1,5 @@
 # Projet Périscolaire
 
-## Visual Studio Code
-### Structure des dossiers
-
-L'espace de travail contient deux dossiers par défaut :
-
-- `src` : le dossier contenant les sources
-- `lib` : le dossier contenant les dépendances
-
-Les fichiers de sorties compilés sont générés dans le dossier `bin` par défaut.
-
-> Pour personnaliser la structure des dossiers, ouvrir `.vscode/settings.json` et changer les paramètres concernés.
-
-### Gestion des dépendances
-
-La vue `JAVA PROJECTS` permet de gérer les dépendances. Plus de détails [ici](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
-
 ## Commandes pour naviguer dans le terminal
 
 Pour vous rendre dans un dossier particulier, vous devez indiquer après la commande `cd` le chemin du dossier en question.
@@ -75,7 +59,7 @@ $ git clone https://github.com/TogjiTL/Periscolaire.git
 ```
 ### Récupération des modifications
 
-Avant de faire une modification quand le projet est commencé, ou souvent modifié, pensez à récupérer les modifications (même s'il n'y a rien) :
+Avant de faire une modification quand le projet est commencé, ou souvent modifié, pensez à récupérer les modifications (même s'il n'y a rien de nouveau) :
 
 ```bash
 tagbi@LAPTOP-VIUROA8L MINGW64 ~/OneDrive/Bureau/Periscolaire/
@@ -83,4 +67,18 @@ $ cd Periscolaire
 tagbi@LAPTOP-VIUROA8L MINGW64 ~/OneDrive/Bureau/Periscolaire/Periscolaire
 $ git pull
 ```
+### Déposer des modifictions
 
+Pour émettre des ajouts/modifications sur le dépôt git, plusieurs solutions :
+
+- On peut se placer à la racine du projet (ici *Periscolaire*) et entrer la commande `git add .` ;
+- On peut se placer dans le dossier contenant le fichier modifié (ou directement entrer la commande suivi du chemin) et entre `git add *fichier*`.
+
+```bash
+tagbi@LAPTOP-VIUROA8L MINGW64 ~/OneDrive/Bureau/Periscolaire/
+$ git add .
+tagbi@LAPTOP-VIUROA8L MINGW64 ~/OneDrive/Bureau/Periscolaire/
+$ git commit -m "*message/commentaire pertinent*"
+tagbi@LAPTOP-VIUROA8L MINGW64 ~/OneDrive/Bureau/Periscolaire/
+$ git push
+```
