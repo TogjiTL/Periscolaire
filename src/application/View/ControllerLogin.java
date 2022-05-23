@@ -1,4 +1,4 @@
-package application.Controller;
+package application.View;
 
 import java.awt.event.ActionEvent;
 import java.io.IOException;
@@ -19,7 +19,7 @@ public class ControllerLogin {
 	  	private Scene scene;
 	  	private Parent root;
 	  
-	  	public void Validation(ActionEvent event) throws IOException {
+	  	void Validation(ActionEvent event) throws IOException {
 	  		root = FXMLLoader.load(getClass().getResource("../View/PageAcceuil.fxml"));
 	  		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	  		scene = new Scene(root);
