@@ -19,7 +19,7 @@ public class ControllerLogin {
 
 	    @FXML
 	    void Display(ActionEvent event) throws IOException {
-	    	root = FXMLLoader.load(getClass().getResource("PageAccueil.fxml"));
+	    	root = FXMLLoader.load(getClass().getResource("CreationActivite.fxml"));
 			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    	scene = new Scene(root);
 			stage.setScene(scene);

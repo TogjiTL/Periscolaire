@@ -1,37 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.View.ControllerAccueil">
    <children>
-      <BorderPane>
+      <BorderPane prefHeight="400.0" prefWidth="600.0">
          <top>
-            <MenuBar prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-              <menus>
-                <Menu mnemonicParsing="false" text="Acceuil">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Creation Enfant">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Creation activité">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
-                  </items>
-                </Menu>
-              </menus>
-            </MenuBar>
+            <HBox prefHeight="54.0" prefWidth="600.0" style="-fx-border-color: #000000;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#createAct" prefHeight="74.0" prefWidth="102.0" text="Accueil">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#createAct" prefHeight="75.0" prefWidth="116.0" text="Creation Enfant">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#createAct" prefHeight="80.0" prefWidth="110.0" text="Creation Activitée">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <ImageView fitHeight="72.0" fitWidth="293.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Image/périsco.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
          </top>
+         <left>
+            <ListView fx:id="listActivite" prefHeight="326.0" prefWidth="254.0" BorderPane.alignment="CENTER" />
+         </left>
       </BorderPane>
-      <ListView fx:id="listActivite" layoutX="34.0" layoutY="100.0" prefHeight="252.0" prefWidth="245.0" />
    </children>
 </AnchorPane>
