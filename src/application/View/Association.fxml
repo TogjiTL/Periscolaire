@@ -12,9 +12,9 @@
    <children>
       <BorderPane prefHeight="400.0" prefWidth="600.0">
          <top>
-            <HBox prefHeight="54.0" prefWidth="600.0" style="-fx-border-color: #000000;" BorderPane.alignment="CENTER">
+            <HBox prefHeight="55.0" prefWidth="600.0" style="-fx-border-color: #000000;" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" onAction="#createAct" prefHeight="52.0" prefWidth="129.0" text="Horaire et Annonce " />
+                  <Button mnemonicParsing="false" onAction="#retourAccueil" prefHeight="79.0" prefWidth="126.0" text="Horaire et Annonce " />
                   <Button mnemonicParsing="false" onAction="#createEnfant" prefHeight="75.0" prefWidth="125.0" text="Creation Enfant">
                      <HBox.margin>
                         <Insets />
@@ -25,12 +25,12 @@
                         <Insets />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#createAct" prefHeight="52.0" prefWidth="112.0" text="Associacition">
+                  <Button mnemonicParsing="false" prefHeight="68.0" prefWidth="109.0" text="Associacition">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#createAct" prefHeight="52.0" prefWidth="125.0" text="Facture" />
+                  <Button mnemonicParsing="false" onAction="#facture" prefHeight="68.0" prefWidth="122.0" text="Facture" />
                </children>
             </HBox>
          </top>
@@ -38,7 +38,7 @@
             <ListView fx:id="listActivite" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
          </left>
          <right>
-            <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+            <ListView fx:id="listeEnfant" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
          </right>
          <bottom>
             <HBox prefHeight="38.0" prefWidth="600.0" BorderPane.alignment="CENTER">
@@ -57,7 +57,12 @@
             </HBox>
          </bottom>
          <center>
-            <Button mnemonicParsing="false" text="Associer" BorderPane.alignment="CENTER" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ListView fx:id="historique" layoutX="8.0" layoutY="121.0" prefHeight="139.0" prefWidth="185.0" />
+                  <Button layoutX="74.0" layoutY="89.0" mnemonicParsing="false" onAction="#history" text="Associer" />
+               </children>
+            </AnchorPane>
          </center>
       </BorderPane>
    </children>

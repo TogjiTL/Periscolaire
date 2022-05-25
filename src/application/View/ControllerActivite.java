@@ -26,7 +26,7 @@ import javafx.stage.Stage;
 		private Scene scene;
 		private Parent root;
 		
-		private static ArrayList<String> listeAct = new ArrayList<>();
+		private static ArrayList<String> listeAct = new ArrayList<>(); // liste activité 
 		
 		
 		public ControllerActivite(){
@@ -44,19 +44,13 @@ import javafx.stage.Stage;
 	    @FXML
 	    void removeAct(ActionEvent event) {
 	    	int selectedId = listCreationActivite.getSelectionModel().getSelectedIndex();
+	    	String name = listCreationActivite.getItems().get(selectedId);
 	    	listCreationActivite.getItems().remove(selectedId);
-	    	listeAct.remove(selectedId);
+	    	listeAct.remove(name);
+	    	
 
 	    }    
 
-	    @FXML
-	    void retourAccueil(ActionEvent event) throws IOException {
-	    	root = FXMLLoader.load(getClass().getResource("PageAccueil.fxml"));
-			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-	    	scene = new Scene(root);
-			stage.setScene(scene);
-			stage.show();
-	    }
 	    
 	    @FXML
 	    void PageEnfant(ActionEvent event) throws IOException {
@@ -67,6 +61,38 @@ import javafx.stage.Stage;
 			stage.show();
 	    }
 	    
+
+	    @FXML
+	    void retourAccueil(ActionEvent event) throws IOException {
+	    	root = FXMLLoader.load(getClass().getResource("HoraireAnnonce.fxml"));
+			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+	    	scene = new Scene(root);
+			stage.setScene(scene);
+			stage.show();
+	    }
+	    
+	    @FXML
+	    void asso(ActionEvent event) throws IOException {
+	    	
+	    root = FXMLLoader.load(getClass().getResource("Association.fxml"));
+  		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+  		scene = new Scene(root);
+  		stage.setScene(scene);
+  		stage.show();
+
+	    }
+
+
+	    @FXML
+	    void facture(ActionEvent event) throws IOException {
+	    	
+	    	root = FXMLLoader.load(getClass().getResource("Facture.fxml"));
+			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+	    	scene = new Scene(root);
+			stage.setScene(scene);
+			stage.show();
+
+	    }
 	    public static ArrayList<String> getListeAct() {
 	    	return listeAct;
 	    }

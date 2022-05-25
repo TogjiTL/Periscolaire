@@ -18,7 +18,7 @@ import javafx.stage.Stage;
 
 	public class ControllerEnfant implements Observable{
 	    @FXML
-	    private ListView<String> listCreationActivite;
+	    private ListView<String> listCreationEnfant;
 
 	    @FXML
 	    private TextField name;
@@ -26,7 +26,7 @@ import javafx.stage.Stage;
 		private Scene scene;
 		private Parent root;
 		
-		private static ArrayList<String> listeAct = new ArrayList<>();
+		private static ArrayList<String> listeEnfant = new ArrayList<>();
 		
 		
 		public ControllerEnfant(){
@@ -36,22 +36,23 @@ import javafx.stage.Stage;
 		
 	    @FXML
 	    void addEnfant(ActionEvent event) {
-	    	listCreationActivite.getItems().add(name.getText());
-	    	listeAct.add(name.getText());
+	    	listCreationEnfant.getItems().add(name.getText());
+	    	listeEnfant.add(name.getText());
 
 	    }
 
 	    @FXML
 	    void removeEnfant(ActionEvent event) {
-	    	int selectedId = listCreationActivite.getSelectionModel().getSelectedIndex();
-	    	listCreationActivite.getItems().remove(selectedId);
-	    	listeAct.remove(selectedId);
+	    	int selectedId = listCreationEnfant.getSelectionModel().getSelectedIndex();
+	    	String name = listCreationEnfant.getItems().get(selectedId);
+	    	listCreationEnfant.getItems().remove(selectedId);
+	    	listeEnfant.remove(name);
 
 	    }    
 
 	    @FXML
 	    void retourAccueil(ActionEvent event) throws IOException {
-	    	root = FXMLLoader.load(getClass().getResource("PageAccueil.fxml"));
+	    	root = FXMLLoader.load(getClass().getResource("HoraireAnnonce.fxml"));
 			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    	scene = new Scene(root);
 			stage.setScene(scene);
@@ -59,18 +60,42 @@ import javafx.stage.Stage;
 	    }
 	    
 	    @FXML
-	    void PageActivite(ActionEvent event) throws IOException {
+	    void asso(ActionEvent event) throws IOException {
+	    	
+	    root = FXMLLoader.load(getClass().getResource("Association.fxml"));
+  		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+  		scene = new Scene(root);
+  		stage.setScene(scene);
+  		stage.show();
+
+	    }
+
+	    @FXML
+	    void createAct(ActionEvent event) throws IOException {
 	    	root = FXMLLoader.load(getClass().getResource("CreationActivite.fxml"));
 			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    	scene = new Scene(root);
 			stage.setScene(scene);
 			stage.show();
+
+	    }
+
+
+	    @FXML
+	    void facture(ActionEvent event) throws IOException {
+	    	
+	    	root = FXMLLoader.load(getClass().getResource("Facture.fxml"));
+			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+	    	scene = new Scene(root);
+			stage.setScene(scene);
+			stage.show();
+
 	    }
 	    
 	    
 	    
-	    public static ArrayList<String> getListeAct() {
-	    	return listeAct;
+	    public static ArrayList<String> getListeEnfant() {
+	    	return listeEnfant;
 	    }
 
 

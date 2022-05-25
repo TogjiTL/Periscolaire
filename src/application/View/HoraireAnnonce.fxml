@@ -15,11 +15,11 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.View.ControllerHoraireAnnonce">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.View.ControllerHoraireAnnonce">
    <children>
       <BorderPane prefHeight="410.0" prefWidth="610.0">
          <top>
-            <HBox prefHeight="54.0" prefWidth="600.0" style="-fx-border-color: #000000;" BorderPane.alignment="CENTER">
+            <HBox prefHeight="55.0" prefWidth="600.0" style="-fx-border-color: #000000;" BorderPane.alignment="CENTER">
                <children>
                   <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="127.0" text="Horaire et Annonce " />
                   <Button mnemonicParsing="false" onAction="#createEnfant" prefHeight="75.0" prefWidth="125.0" text="Creation Enfant">
