@@ -16,7 +16,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-	public class ControllerActivite implements Observable{
+	public class ControllerEnfant implements Observable{
 	    @FXML
 	    private ListView<String> listCreationActivite;
 
@@ -29,20 +29,20 @@ import javafx.stage.Stage;
 		private static ArrayList<String> listeAct = new ArrayList<>();
 		
 		
-		public ControllerActivite(){
+		public ControllerEnfant(){
 			
 		}
 		
 		
 	    @FXML
-	    void addActivite(ActionEvent event) {
+	    void addEnfant(ActionEvent event) {
 	    	listCreationActivite.getItems().add(name.getText());
 	    	listeAct.add(name.getText());
 
 	    }
 
 	    @FXML
-	    void removeAct(ActionEvent event) {
+	    void removeEnfant(ActionEvent event) {
 	    	int selectedId = listCreationActivite.getSelectionModel().getSelectedIndex();
 	    	listCreationActivite.getItems().remove(selectedId);
 	    	listeAct.remove(selectedId);
@@ -59,13 +59,15 @@ import javafx.stage.Stage;
 	    }
 	    
 	    @FXML
-	    void PageEnfant(ActionEvent event) throws IOException {
-	    	root = FXMLLoader.load(getClass().getResource("CreationEnfant.fxml"));
+	    void PageActivite(ActionEvent event) throws IOException {
+	    	root = FXMLLoader.load(getClass().getResource("CreationActivite.fxml"));
 			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	    	scene = new Scene(root);
 			stage.setScene(scene);
 			stage.show();
 	    }
+	    
+	    
 	    
 	    public static ArrayList<String> getListeAct() {
 	    	return listeAct;

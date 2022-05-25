@@ -14,21 +14,21 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.View.ControllerActivite">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.View.ControllerEnfant">
    <children>
-      <BorderPane layoutY="-1.0" prefHeight="400.0" prefWidth="600.0">
+      <BorderPane prefHeight="409.0" prefWidth="610.0">
          <left>
             <GridPane prefWidth="200.0" BorderPane.alignment="CENTER">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
                <children>
-                  <Label prefHeight="18.0" prefWidth="107.0" text="Creation Activitée">
+                  <Label prefHeight="18.0" prefWidth="107.0" text="Creation Enfant">
                      <GridPane.margin>
                         <Insets left="50.0" />
                      </GridPane.margin>
@@ -38,12 +38,12 @@
                         <Insets left="20.0" right="20.0" />
                      </GridPane.margin>
                   </TextField>
-                  <Button mnemonicParsing="false" onAction="#addActivite" text="Ajouter" GridPane.rowIndex="2">
+                  <Button mnemonicParsing="false" onAction="#addEnfant" text="Ajouter" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="25.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#removeAct" text="Supprimer" GridPane.rowIndex="2">
+                  <Button mnemonicParsing="false" onAction="#removeEnfant" text="Supprimer" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="115.0" />
                      </GridPane.margin>
@@ -62,12 +62,12 @@
                         <Insets />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#PageEnfant" prefHeight="75.0" prefWidth="116.0" text="Creation Enfant">
+                  <Button mnemonicParsing="false" prefHeight="75.0" prefWidth="116.0" text="Creation Enfant">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="110.0" text="Creation Activitée">
+                  <Button mnemonicParsing="false" onAction="#PageActivite" prefHeight="80.0" prefWidth="110.0" text="Creation Activitée">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
