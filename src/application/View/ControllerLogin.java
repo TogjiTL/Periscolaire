@@ -21,7 +21,7 @@ public class ControllerLogin {
 		
 	    @FXML
 	    private TextField user;
-	    private ArrayList Users = new ArrayList<>(Arrays.asList("Maxime", "Todji" , "Souleymane"));
+	    private ArrayList Users = new ArrayList<>(Arrays.asList("Maxime", "Togji" , "Souleymane"));
 
 	    @FXML
 	    void Display(ActionEvent event) throws IOException {
