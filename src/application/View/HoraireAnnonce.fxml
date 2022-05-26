@@ -46,7 +46,7 @@
                <children>
                   <ImageView fitHeight="61.0" fitWidth="206.0" layoutX="9.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../Image/périsco.png" />
+                        <Image url="@../périsco.png" />
                      </image>
                   </ImageView>
                   <ListView fx:id="Horaire" layoutX="70.0" layoutY="89.0" prefHeight="176.0" prefWidth="140.0" />
