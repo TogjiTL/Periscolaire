@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.View.ControllerLogin">
    <children>
-      <Label layoutX="259.0" layoutY="76.0" prefHeight="57.0" prefWidth="84.0" text="Login ... ">
+      <Label layoutX="274.0" layoutY="76.0" prefHeight="57.0" prefWidth="84.0" text="Login ... ">
          <font>
             <Font size="18.0" />
          </font>
@@ -18,6 +18,7 @@
       <Label layoutX="171.0" layoutY="245.0" text="Password" />
       <TextField fx:id="user" layoutX="246.0" layoutY="171.0" />
       <Button fx:id="btnValider" layoutX="274.0" layoutY="306.0" mnemonicParsing="false" onAction="#Display" text="Valider" />
-      <PasswordField layoutX="246.0" layoutY="241.0" prefHeight="25.0" prefWidth="149.0" />
+      <PasswordField fx:id="mdp" layoutX="246.0" layoutY="241.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label fx:id="erreur" layoutX="215.0" layoutY="134.0" text="Utilisateur ou Password incorect" textFill="#f70606" />
    </children>
 </AnchorPane>
