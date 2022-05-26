@@ -22,6 +22,8 @@ public class ControllerAssociation implements Initializable{
     private Stage stage;
 	private Scene scene;
 	private Parent root;
+	
+	private static String prenomEnfant;
 	 @FXML
 	    private ListView<String> historique;
 
@@ -31,7 +33,9 @@ public class ControllerAssociation implements Initializable{
 	    @FXML
 	    private ListView<String> listeEnfant;
   	   
-	
+	public ControllerAssociation() {
+		// TODO Auto-generated constructor stub
+	}
 
     @FXML
     void retourAccueil(ActionEvent event) throws IOException {
@@ -87,6 +91,25 @@ public class ControllerAssociation implements Initializable{
 
     	historique.getItems().add(enfant + " a été ajouté à " + activite);
     }  
+    
+    @FXML
+    public void infoEnfant(ActionEvent event) throws IOException {
+    	int selectedId = listeEnfant.getSelectionModel().getSelectedIndex();
+    	String name = listeEnfant.getItems().get(selectedId);
+    	
+    	prenomEnfant = name ;
+    	
+    	root = FXMLLoader.load(getClass().getResource("InfoEnfant.fxml"));
+		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+    	scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
+
+    }  
+    
+    public static String getPrenomEnfant() {
+    	return prenomEnfant;
+    }
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {

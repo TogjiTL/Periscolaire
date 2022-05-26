@@ -4,6 +4,8 @@ package application.View;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import application.Model.Enfant;
+import application.Model.ListeEnfant;
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
 import javafx.event.ActionEvent;
@@ -28,6 +30,16 @@ import javafx.stage.Stage;
 		
 		private static ArrayList<String> listeEnfant = new ArrayList<>();
 		
+		 @FXML
+		    private TextField age;
+
+		    @FXML
+		    private TextField nom;
+
+		    @FXML
+		    private TextField numParent;
+		    
+		    private static ListeEnfant listeE = new ListeEnfant();
 		
 		public ControllerEnfant(){
 			
@@ -38,10 +50,25 @@ import javafx.stage.Stage;
 	    void addEnfant(ActionEvent event) {
 	    	listCreationEnfant.getItems().add(name.getText());
 	    	listeEnfant.add(name.getText());
+	    	
+	    	String prenom = name.getText();
+	    	String n = nom.getText();
+	    	String a = age.getText();
+	    	String numP = numParent.getText();
+	    	
+	    	Enfant enfant = new Enfant(n ,prenom  , a, numP);
+	    	
+	    	listeE.addEnfant(enfant);
 
 	    }
+	      
 
-	    @FXML
+		public static ListeEnfant getListeE() {
+			return listeE;
+		}
+
+
+		@FXML
 	    void removeEnfant(ActionEvent event) {
 	    	int selectedId = listCreationEnfant.getSelectionModel().getSelectedIndex();
 	    	String name = listCreationEnfant.getItems().get(selectedId);
