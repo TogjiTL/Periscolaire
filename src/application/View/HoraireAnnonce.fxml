@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.View.ControllerHoraireAnnonce">
+   <children>
+      <BorderPane prefHeight="410.0" prefWidth="610.0">
+         <top>
+            <HBox prefHeight="55.0" prefWidth="600.0" style="-fx-border-color: #000000;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="61.0" prefWidth="127.0" text="Horaire et Annonce " />
+                  <Button mnemonicParsing="false" onAction="#createEnfant" prefHeight="75.0" prefWidth="125.0" text="Creation Enfant">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#createAct" prefHeight="80.0" prefWidth="125.0" text="Creation Activitée">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#asso" prefHeight="59.0" prefWidth="111.0" text="Associacition">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#facture" prefHeight="63.0" prefWidth="125.0" text="Facture" />
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <AnchorPane prefHeight="356.0" prefWidth="211.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="61.0" fitWidth="206.0" layoutX="9.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Image/périsco.png" />
+                     </image>
+                  </ImageView>
+                  <ListView fx:id="Horaire" layoutX="70.0" layoutY="89.0" prefHeight="176.0" prefWidth="140.0" />
+                  <GridPane layoutX="14.0" layoutY="98.0" prefHeight="157.0" prefWidth="75.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="52.0" text="Lundi" />
+                        <Label text="Mardi" GridPane.rowIndex="1" />
+                        <Label text="Mercredi" GridPane.rowIndex="2" />
+                        <Label text="Jeudi" GridPane.rowIndex="3" />
+                        <Label text="Vendredi" GridPane.rowIndex="4" />
+                        <Label text="Samedi" GridPane.rowIndex="5" />
+                        <Label text="Dimanche" GridPane.rowIndex="6" />
+                     </children>
+                  </GridPane>
+                  <TextField fx:id="heure" layoutX="15.0" layoutY="279.0" prefHeight="25.0" prefWidth="193.0" />
+                  <Button fx:id="modifier" layoutX="82.0" layoutY="311.0" mnemonicParsing="false" onAction="#modifHeure" text="Modifier" />
+               </children>
+            </AnchorPane>
+         </left>
+         <right>
+            <AnchorPane prefHeight="356.0" prefWidth="400.0" style="-fx-border-color: #77b5fe;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="90.0" text="Annonce :">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="annonce" layoutX="14.0" layoutY="48.0" prefHeight="66.0" prefWidth="378.0" />
+                  <Button fx:id="publier" layoutX="333.0" layoutY="122.0" mnemonicParsing="false" onAction="#addAnnonce" text="Publier" />
+                  <ListView fx:id="listAnnonce" layoutX="17.0" layoutY="154.0" prefHeight="188.0" prefWidth="372.0" style="-fx-background-color: #77b5fe;" />
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
