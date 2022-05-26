@@ -6,6 +6,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.ResourceBundle;
 
+import application.Model.Activite;
+import application.Model.Enfant;
+import application.Model.ListeActivite;
+import application.Model.ListeEnfant;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -92,6 +96,27 @@ public class ControllerAssociation implements Initializable{
     	
 
     	historique.getItems().add(enfant + " a été ajouté à " + activite);
+    	
+    	ListeEnfant liste = ControllerEnfant.getListeE();
+		Enfant e = liste.chercheEnfant(enfant);
+		
+		double cout = e.getCout();
+		
+		ListeActivite listeAct = ControllerActivite.getListeA();
+		Activite a = listeAct.chercheActivite(activite);
+		
+		String p = a.getPrix();
+		
+		String c = a.getCapacite();
+		
+		int newCap = Integer. parseInt(c) - 1;
+		
+		double newCout = cout + Double.parseDouble(p) ;
+		
+		a.setCapacite(String.valueOf(newCap));
+		e.setCout(newCout);
+		
+		
     }  
     
     @FXML

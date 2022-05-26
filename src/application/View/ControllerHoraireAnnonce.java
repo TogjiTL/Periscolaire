@@ -42,7 +42,7 @@ public class ControllerHoraireAnnonce implements Initializable {
     @FXML
     private ListView<String> listAnnonce;
     
-    String[] Annonce = { " Activité Foot complète"};
+    String[] Annonce = { "Activité Foot complète"};
     
     @FXML
     private Button publier;

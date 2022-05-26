@@ -8,6 +8,8 @@ public class Enfant {
 	private String age;
 	private String numParent;
 	
+	private double cout = 0;
+	
 	
 	public Enfant(String n, String p, String a, String num) {
 		nom = n ;
@@ -48,5 +50,13 @@ public class Enfant {
 		this.numParent = numParent;
 	}
 
+	public double getCout() {
+		return cout;
+	}
+
+	public void setCout(double cout) {
+		this.cout = cout;
+	}
+	
 
 }
