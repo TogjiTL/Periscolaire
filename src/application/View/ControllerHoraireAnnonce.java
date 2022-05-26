@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.ResourceBundle;
 
+import application.Model.Anonce;
+import application.Model.Horairee;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -30,19 +32,11 @@ public class ControllerHoraireAnnonce implements Initializable {
 	
     @FXML
     private ListView<String> Horaire;
-    String[] Heure = {
-    		"10h - 12h  /  14h - 16h",
-    		"10h - 12h  /  14h - 16h",
-    		"10h - 12h",
-    		"10h - 12h  /  14h - 16h",
-    		"10h - 12h  /  14h - 16h",
-    		"10h - 12h",
-    		"Fermé",};
+    
 
     @FXML
     private ListView<String> listAnnonce;
-    
-    String[] Annonce = { "Activité Foot complète"};
+
     
     @FXML
     private Button publier;
@@ -53,6 +47,9 @@ public class ControllerHoraireAnnonce implements Initializable {
 
     @FXML
     private Button modifier;
+    
+    public static Horairee h = new Horairee();
+    public static Anonce a = new Anonce();
 	
 	  @FXML
 	    void asso(ActionEvent event) throws IOException {
@@ -102,20 +99,24 @@ public class ControllerHoraireAnnonce implements Initializable {
 	    	int selectedId = Horaire.getSelectionModel().getSelectedIndex();
 	    	Horaire.getItems().remove(selectedId);
 	    	Horaire.getItems().add(selectedId,heure.getText());
+	    	
+	    	h.change(heure.getText(), selectedId);
 
 	    }    
 	    
 	    @FXML
 	    void addAnnonce(ActionEvent event) {
 	    	listAnnonce.getItems().add(annonce.getText());
+	    	
+	    	a.add(annonce.getText());
 
 	    }   
 
 		@Override
 		public void initialize(URL arg0, ResourceBundle arg1) {
 			// TODO Auto-generated method stub
-			Horaire.getItems().addAll(Heure);
-			listAnnonce.getItems().addAll(Annonce);
+			Horaire.getItems().addAll(h.getHeure());
+			listAnnonce.getItems().addAll(a.getAnonce());
 		}
 
 
