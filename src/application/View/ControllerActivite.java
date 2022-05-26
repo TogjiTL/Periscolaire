@@ -4,6 +4,8 @@ package application.View;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import application.Model.Activite;
+import application.Model.ListeActivite;
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
 import javafx.event.ActionEvent;
@@ -26,7 +28,15 @@ import javafx.stage.Stage;
 		private Scene scene;
 		private Parent root;
 		
+		@FXML
+		private TextField capacite;
+
+		@FXML
+		private TextField prix;
+		
 		private static ArrayList<String> listeAct = new ArrayList<>(); // liste activité 
+		
+		private static ListeActivite listeA = new ListeActivite();
 		
 		
 		public ControllerActivite(){
@@ -38,8 +48,20 @@ import javafx.stage.Stage;
 	    void addActivite(ActionEvent event) {
 	    	listCreationActivite.getItems().add(name.getText());
 	    	listeAct.add(name.getText());
+	    	
+	    	String nom = name.getText();
+	    	String c = capacite.getText();
+	    	String p = prix.getText();
+	    	
+	    	Activite act = new Activite(nom ,p , c);
+	    	
+	    	listeA.addActivite(act);
 
 	    }
+	    
+	    public static ListeActivite getListeA() {
+			return listeA;
+		}
 
 	    @FXML
 	    void removeAct(ActionEvent event) {

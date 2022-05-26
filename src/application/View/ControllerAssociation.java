@@ -24,6 +24,8 @@ public class ControllerAssociation implements Initializable{
 	private Parent root;
 	
 	private static String prenomEnfant;
+	
+	private static String prenomActivite;
 	 @FXML
 	    private ListView<String> historique;
 
@@ -109,6 +111,25 @@ public class ControllerAssociation implements Initializable{
     
     public static String getPrenomEnfant() {
     	return prenomEnfant;
+    }
+    
+    @FXML
+    public void infoActivite(ActionEvent event) throws IOException {
+    	int selectedId = listActivite.getSelectionModel().getSelectedIndex();
+    	String name = listActivite.getItems().get(selectedId);
+    	
+    	prenomActivite = name ;
+    	
+    	root = FXMLLoader.load(getClass().getResource("InfoActivite.fxml"));
+		stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+    	scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
+
+    }  
+    
+    public static String getActivite() {
+    	return prenomActivite;
     }
 
 	@Override

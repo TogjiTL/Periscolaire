@@ -20,7 +20,6 @@ public class ListeEnfant {
 		for ( Enfant e : listeEnfant ) {
 			if( e.getPrenom().equals(n)) return e;
 		}
-		System.out.println("toto");
 		return null;
 	}
 
