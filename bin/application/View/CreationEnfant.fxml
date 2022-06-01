@@ -43,20 +43,20 @@
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
                   <TextField fx:id="name" layoutX="175.0" layoutY="72.0" />
-                  <Button layoutX="249.0" layoutY="277.0" mnemonicParsing="false" onAction="#removeEnfant" text="Supprimer" />
+                  <TextField fx:id="nom" layoutX="175.0" layoutY="105.0" />
+                  <TextField fx:id="age" layoutX="175.0" layoutY="144.0" />
+                  <TextField fx:id="numParent" layoutX="175.0" layoutY="187.0" />
                   <Button layoutX="164.0" layoutY="277.0" mnemonicParsing="false" onAction="#addEnfant" text="Ajouter" />
+                  <Button layoutX="249.0" layoutY="277.0" mnemonicParsing="false" onAction="#removeEnfant" text="Supprimer" />
                   <Label layoutX="25.0" layoutY="31.0" prefHeight="27.0" prefWidth="177.0" text="Creation Enfant">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Label>
                   <Label layoutX="47.0" layoutY="76.0" text="Prenom Enfant" />
-                  <TextField fx:id="nom" layoutX="175.0" layoutY="105.0" />
                   <Label layoutX="47.0" layoutY="109.0" text="Nom Enfant" />
                   <Label layoutX="47.0" layoutY="148.0" text="Age" />
                   <Label layoutX="47.0" layoutY="191.0" text="Numéro Parent" />
-                  <TextField fx:id="numParent" layoutX="175.0" layoutY="187.0" />
-                  <TextField fx:id="age" layoutX="175.0" layoutY="144.0" />
                </children>
             </AnchorPane>
          </center>

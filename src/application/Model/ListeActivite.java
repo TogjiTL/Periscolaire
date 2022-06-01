@@ -13,6 +13,7 @@ public class ListeActivite {
 	
 	public void addActivite(Activite e) {
 		listeAct.add(e);
+		System.out.println("\n" + e.toString() + "\n");
 	}
 	
 	public Activite chercheActivite(String n) {

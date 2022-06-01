@@ -6,6 +6,10 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import com.mysql.jdbc.Connection;
+import com.mysql.jdbc.Statement;
+import java.sql.*;
+
 import application.Model.Activite;
 import application.Model.ListeActivite;
 import javafx.event.ActionEvent;
@@ -57,6 +61,34 @@ import javafx.stage.Stage;
 	    	Activite act = new Activite(nom ,p , c);
 	    	
 	    	listeA.addActivite(act);
+	    	
+	    	System.out.println(act.getNom());
+	    	System.out.println(act.getPrix());
+	    	System.out.println(act.getCapacite());
+	    	
+	    	try {
+	    		//etape 1: charger la classe de driver
+	            Class.forName("com.mysql.jdbc.Driver");
+
+	            //etape 2: creer l'objet de connexion
+	            Connection conn = (Connection) DriverManager.getConnection(
+	            "jdbc:mysql://localhost:3306/periscolaire?characterEncoding=latin1", "root", "Jmay1994Tahi-ti1");
+	            System.out.println("connected");
+
+	          //étape 3: créer l'objet statement 
+	            Statement stmt = (Statement) conn.createStatement();
+	            
+	            String sql = "INSERT INTO ACTIVITIE " +
+	                     "(idActivite,intitule,prix,capacite) values(1, '" + act.getNom() + "', '" + act.getPrix() + "', '" + act.getCapacite() + "')";
+	        stmt.executeUpdate(sql);
+	            
+	            conn.close();
+	    	} catch (Exception e ) {
+	            System.out.println("not connected");
+	            System.out.println(e);
+
+	        }
+	    	
 
 	    }
 	    

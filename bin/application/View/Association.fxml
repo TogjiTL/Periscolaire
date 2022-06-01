@@ -59,10 +59,10 @@
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <ListView fx:id="historique" layoutX="8.0" layoutY="121.0" prefHeight="139.0" prefWidth="185.0" />
-                  <Button layoutX="74.0" layoutY="89.0" mnemonicParsing="false" onAction="#history" text="Associer" />
                   <Button layoutX="49.0" layoutY="14.0" mnemonicParsing="false" onAction="#infoActivite" text="Consulter Activité" />
                   <Button layoutX="48.0" layoutY="51.0" mnemonicParsing="false" onAction="#infoEnfant" prefHeight="25.0" prefWidth="111.0" text="Consulter Enfant" />
+                  <Button layoutX="74.0" layoutY="89.0" mnemonicParsing="false" onAction="#history" text="Associer" />
+                  <ListView fx:id="historique" layoutX="8.0" layoutY="121.0" prefHeight="139.0" prefWidth="185.0" />
                </children>
             </AnchorPane>
          </center>

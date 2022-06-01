@@ -35,5 +35,9 @@ public class Activite {
 	public void setCapacite(String capacite) {
 		this.capacite = capacite;
 	}
+	
+	public String toString() {
+		return "Intitulé : " + this.nom + "\nPrix : " + this.prix + "\nCapacite : " + this.capacite;
+	}
 
 }
