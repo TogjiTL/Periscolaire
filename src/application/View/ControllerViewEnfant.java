@@ -21,7 +21,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-	public class ControllerEnfant implements Initializable{
+	public class ControllerViewEnfant implements Initializable{
 	    @FXML
 	    private ListView<String> listCreationEnfant;
 
@@ -44,7 +44,7 @@ import javafx.stage.Stage;
 		    
 		    private static ListeEnfant listeE = new ListeEnfant();
 		
-		public ControllerEnfant(){
+		public ControllerViewEnfant(){
 			
 		}
 		

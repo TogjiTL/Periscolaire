@@ -23,7 +23,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-	public class ControllerActivite implements Initializable{
+	public class ControllerViewActivite implements Initializable{
 	    @FXML
 	    private ListView<String> listCreationActivite;
 
@@ -44,7 +44,7 @@ import javafx.stage.Stage;
 		private static ListeActivite listeA = new ListeActivite();
 		
 		
-		public ControllerActivite(){
+		public ControllerViewActivite(){
 			
 		}
 		
@@ -78,8 +78,8 @@ import javafx.stage.Stage;
 	          //étape 3: créer l'objet statement 
 	            Statement stmt = (Statement) conn.createStatement();
 	            
-	            String sql = "INSERT INTO ACTIVITIE " +
-	                     "(idActivite,intitule,prix,capacite) values(1, '" + act.getNom() + "', '" + act.getPrix() + "', '" + act.getCapacite() + "')";
+	            String sql = "INSERT INTO ACTIVITE " +
+	                     "(intitule,prix,capacite) values('" + act.getNom() + "', '" + act.getPrix() + "', '" + act.getCapacite() + "')";
 	        stmt.executeUpdate(sql);
 	            
 	            conn.close();

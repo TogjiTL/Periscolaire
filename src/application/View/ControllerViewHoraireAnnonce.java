@@ -24,7 +24,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
-public class ControllerHoraireAnnonce implements Initializable {
+public class ControllerViewHoraireAnnonce implements Initializable {
 	
 	private Stage stage;
 	private Scene scene;

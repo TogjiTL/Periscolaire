@@ -19,7 +19,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
-public class ControllerLogin implements Initializable {
+public class ControllerViewLogin implements Initializable {
 		private Stage stage;
 		private Scene scene;
 		private Parent root;

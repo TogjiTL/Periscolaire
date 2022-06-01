@@ -25,8 +25,8 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 		
-		Connection con=null;
-        String test= "Angel";
+		// Connection con=null;
+        // String test= "Angel";
 
     try {
         //etape 1: charger la classe de driver

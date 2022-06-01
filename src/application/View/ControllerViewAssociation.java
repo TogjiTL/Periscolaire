@@ -20,7 +20,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
-public class ControllerAssociation implements Initializable{
+public class ControllerViewAssociation implements Initializable{
 	
     @FXML
     private Stage stage;
@@ -39,7 +39,7 @@ public class ControllerAssociation implements Initializable{
 	    @FXML
 	    private ListView<String> listeEnfant;
   	   
-	public ControllerAssociation() {
+	public ControllerViewAssociation() {
 		// TODO Auto-generated constructor stub
 	}
 
@@ -97,12 +97,12 @@ public class ControllerAssociation implements Initializable{
 
     	historique.getItems().add(enfant + " a été ajouté à " + activite);
     	
-    	ListeEnfant liste = ControllerEnfant.getListeE();
+    	ListeEnfant liste = ControllerViewEnfant.getListeE();
 		Enfant e = liste.chercheEnfant(enfant);
 		
 		double cout = e.getCout();
 		
-		ListeActivite listeAct = ControllerActivite.getListeA();
+		ListeActivite listeAct = ControllerViewActivite.getListeA();
 		Activite a = listeAct.chercheActivite(activite);
 		
 		String p = a.getPrix();
@@ -161,10 +161,10 @@ public class ControllerAssociation implements Initializable{
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		
-		ArrayList<String> listeAct = ControllerActivite.getListeAct(); 	   // mettre la liste des noms des activités de la BD
+		ArrayList<String> listeAct = ControllerViewActivite.getListeAct(); 	   // mettre la liste des noms des activités de la BD
     	listActivite.getItems().addAll(listeAct);
     	
-    	ArrayList<String> listeEnf = ControllerEnfant.getListeEnfant(); 	   // mettre la liste des noms des enfants de la BD
+    	ArrayList<String> listeEnf = ControllerViewEnfant.getListeEnfant(); 	   // mettre la liste des noms des enfants de la BD
     	listeEnfant.getItems().addAll(listeEnf);
 	   
 

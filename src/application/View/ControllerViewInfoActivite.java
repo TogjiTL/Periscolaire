@@ -18,7 +18,7 @@ import application.Model.ListeEnfant;
 	import javafx.scene.control.Label;
 	import javafx.stage.Stage;
 
-	public class ControllerInfoActivite implements Initializable{
+	public class ControllerViewInfoActivite implements Initializable{
 		
 	    @FXML
 	    private Stage stage;
@@ -51,8 +51,8 @@ import application.Model.ListeEnfant;
 			public void initialize(URL arg0, ResourceBundle arg1) {
 				// TODO Auto-generated method stub
 				
-				String n = ControllerAssociation.getActivite();
-				ListeActivite liste = ControllerActivite.getListeA();
+				String n = ControllerViewAssociation.getActivite();
+				ListeActivite liste = ControllerViewActivite.getListeA();
 				
 				
 				Activite a = liste.chercheActivite(n);

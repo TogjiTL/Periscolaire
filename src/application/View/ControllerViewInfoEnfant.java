@@ -16,7 +16,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
-public class ControllerInfoEnfant implements Initializable{
+public class ControllerViewInfoEnfant implements Initializable{
 	
     @FXML
     private Stage stage;
@@ -64,8 +64,8 @@ public class ControllerInfoEnfant implements Initializable{
 		public void initialize(URL arg0, ResourceBundle arg1) {
 			// TODO Auto-generated method stub
 			
-			String prenom = ControllerAssociation.getPrenomEnfant();
-			ListeEnfant liste = ControllerEnfant.getListeE();
+			String prenom = ControllerViewAssociation.getPrenomEnfant();
+			ListeEnfant liste = ControllerViewEnfant.getListeE();
 			
 			
 			Enfant e = liste.chercheEnfant(prenom);

@@ -16,7 +16,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-	public class ControllerFacture implements Observable {
+	public class ControllerViewFacture implements Observable {
 		
 	    @FXML
 	    private Stage stage;
@@ -77,7 +77,7 @@ import javafx.stage.Stage;
 	    	
 	    	String enfant = prenom.getText();
 	    	
-	    	ListeEnfant liste = ControllerEnfant.getListeE();
+	    	ListeEnfant liste = ControllerViewEnfant.getListeE();
 			Enfant e = liste.chercheEnfant(enfant);
 			
 			double total = e.getCout();
