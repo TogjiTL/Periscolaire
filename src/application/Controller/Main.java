@@ -1,6 +1,6 @@
 package application.Controller;
+
 import java.sql.*;
-	
 import java.sql.DriverManager;
 
 import com.mysql.jdbc.Connection;
@@ -12,6 +12,10 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+
+/** 
+ * Application Périscolaire
+ * */
 
 public class Main extends Application {
 	@Override
@@ -25,7 +29,7 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		launch(args);
 	}

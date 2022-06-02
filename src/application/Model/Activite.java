@@ -5,38 +5,64 @@ import java.sql.DriverManager;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
 
+/** 
+ * Cette classe permet la gestion des données relatives aux activités
+ * */
+
 public class Activite {
 	
 	private String nom;
 	private int prix;
 	private int capacite;
 	
+	/**
+	 * @param n intitule de l'activité
+	 * @param p prix de l'activité
+	 * @param c capacité d'accueil de l'activité*/
 	public Activite(String n, int p, int c) {
 		nom = n ;
 		prix = p ;
 		capacite = c ;
 	}
 
+	/**
+	 * @return l'intitulé de l'activité
+	 * */
 	public String getNom() {
 		return nom;
 	}
 
+	/**
+	 * @param nom l'intitulé de l'activité
+	 * */
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
 
+	/**
+	 * @return le prix de l'activité
+	 * */
 	public int getPrix() {
 		return prix;
 	}
 
+	/**
+	 * @param prix le prix de l'activité
+	 * */
 	public void setPrix(int prix) {
 		this.prix = prix;
 	}
 
+	/**
+	 * @return la capcité d'accueil de l'activité
+	 * */
 	public int getCapacite() {
 		return capacite;
 	}
 
+	/**
+	 * @param capacite la capacité d'accueil pour cette activité
+	 * */
 	public void setCapacite(int capacite) {
 		this.capacite = capacite;
 	}
@@ -51,6 +77,9 @@ public class Activite {
 		this.capacite = capacite; 
 	}
 	
+	/**
+	 * Permet l'ajout des données de l'activité en base de données
+	 * */
 	public void addToDataBase() {
 		try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -77,6 +106,9 @@ public class Activite {
         }
 	}
 	
+	/**
+	 * Permet la suppression des données de l'activité en base de données
+	 * */
 	public void removeFromDataBase() {
 		try {
             Class.forName("com.mysql.jdbc.Driver");
@@ -102,6 +134,7 @@ public class Activite {
         }
 	}
 	
+	@Override
 	public String toString() {
 		return "Intitulé : " + this.nom + "\nPrix : " + this.prix + "\nCapacite : " + this.capacite;
 	}
