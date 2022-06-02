@@ -45,6 +45,9 @@ import javafx.stage.Stage;
 		
 		
 		public ControllerViewActivite(){
+			for(Activite a : this.listeA.getListeActivite()) {
+				listeAct.add(a.getNom());
+			}
 			
 		}
 		
@@ -58,37 +61,16 @@ import javafx.stage.Stage;
 	    	String c = capacite.getText();
 	    	String p = prix.getText();
 	    	
-	    	Activite act = new Activite(nom ,p , c);
+	    	Activite act = new Activite(nom ,Integer.parseInt(p), Integer.parseInt(c));
 	    	
 	    	listeA.addActivite(act);
 	    	
-	    	System.out.println(act.getNom());
-	    	System.out.println(act.getPrix());
-	    	System.out.println(act.getCapacite());
+	    	// Test
+	    	System.out.println("\n" + act);
+	    	System.out.println();
 	    	
-	    	try {
-	    		//etape 1: charger la classe de driver
-	            Class.forName("com.mysql.jdbc.Driver");
-
-	            //etape 2: creer l'objet de connexion
-	            Connection conn = (Connection) DriverManager.getConnection(
-	            "jdbc:mysql://localhost:3306/periscolaire?characterEncoding=latin1", "root", "Jmay1994Tahi-ti1");
-	            System.out.println("connected");
-
-	          //étape 3: créer l'objet statement 
-	            Statement stmt = (Statement) conn.createStatement();
-	            
-	            String sql = "INSERT INTO ACTIVITE " +
-	                     "(intitule,prix,capacite) values('" + act.getNom() + "', '" + act.getPrix() + "', '" + act.getCapacite() + "')";
-	        stmt.executeUpdate(sql);
-	            
-	            conn.close();
-	    	} catch (Exception e ) {
-	            System.out.println("not connected");
-	            System.out.println(e);
-
-	        }
-	    	
+	    	// Ajout de l'activité à la BDD
+	    	act.addToDataBase();
 
 	    }
 	    
@@ -101,7 +83,10 @@ import javafx.stage.Stage;
 	    	int selectedId = listCreationActivite.getSelectionModel().getSelectedIndex();
 	    	String name = listCreationActivite.getItems().get(selectedId);
 	    	listCreationActivite.getItems().remove(selectedId);
+	    	listeA.chercheActivite(name).removeFromDataBase();
 	    	listeAct.remove(name);
+	    	
+	    	
 	    	
 
 	    }    

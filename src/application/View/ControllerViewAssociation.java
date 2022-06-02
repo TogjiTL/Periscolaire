@@ -105,15 +105,15 @@ public class ControllerViewAssociation implements Initializable{
 		ListeActivite listeAct = ControllerViewActivite.getListeA();
 		Activite a = listeAct.chercheActivite(activite);
 		
-		String p = a.getPrix();
+		int p = a.getPrix();
 		
-		String c = a.getCapacite();
+		int c = a.getCapacite();
 		
-		int newCap = Integer. parseInt(c) - 1;
+		int newCap = c - 1;
 		
-		double newCout = cout + Double.parseDouble(p) ;
+		double newCout = cout + (double)p ;
 		
-		a.setCapacite(String.valueOf(newCap));
+		a.setCapacite(newCap);
 		e.setCout(newCout);
 		
 		

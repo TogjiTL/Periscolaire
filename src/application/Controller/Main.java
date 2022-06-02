@@ -35,10 +35,10 @@ public class Main extends Application {
         //etape 2: creer l'objet de connexion
         Connection conn = (Connection) DriverManager.getConnection(
         "jdbc:mysql://localhost:3306/periscolaire?characterEncoding=latin1", "root", "Jmay1994Tahi-ti1");
-        System.out.println("connected");
+        System.out.println("Main : connected");
 
       //étape 3: créer l'objet statement 
-        Statement stmt = (Statement) conn.createStatement();
+        //Statement stmt = (Statement) conn.createStatement();
         //étape 4: exécuter la requéte
         /*String sql = "CREATE TABLE MARIAGE " +
                      "(id INTEGER not NULL, " +
@@ -53,7 +53,7 @@ public class Main extends Application {
 
 
     } catch (Exception e ) {
-        System.out.println("not connected");
+        System.out.println("not connected : Main");
         System.out.println(e);
 
     }

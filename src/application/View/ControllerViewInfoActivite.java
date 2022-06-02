@@ -58,8 +58,8 @@ import application.Model.ListeEnfant;
 				Activite a = liste.chercheActivite(n);
 				
 				nom.setText(a.getNom());
-				prix.setText(a.getPrix());
-				capacite.setText(a.getCapacite());
+				prix.setText(String.valueOf(a.getPrix()));
+				capacite.setText(String.valueOf(a.getCapacite()));
 				
 				
 			}
