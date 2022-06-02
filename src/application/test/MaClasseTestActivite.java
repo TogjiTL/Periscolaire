@@ -30,8 +30,8 @@ public class MaClasseTestActivite extends TestCase {
 		public void testActivite() {
 			
 	        assertEquals(a.getNom(),"Tennis");
-	        assertEquals(a.getPrix(),"10");
-	        assertEquals(a.getCapacite(),"4");
+	        assertEquals(a.getPrix(),10);
+	        assertEquals(a.getCapacite(),4);
 	        
 	        
 	  }
