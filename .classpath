@@ -53,5 +53,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/OpenJFX 11"/>
 	<classpathentry kind="lib" path="C:/Users/tagbi/Downloads/mysql-connector.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
