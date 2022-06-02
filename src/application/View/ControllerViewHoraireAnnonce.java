@@ -11,7 +11,7 @@ import java.util.Arrays;
 import java.util.ResourceBundle;
 
 import application.Model.Anonce;
-import application.Model.Horairee;
+import application.Model.Horaire;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -48,7 +48,7 @@ public class ControllerViewHoraireAnnonce implements Initializable {
     @FXML
     private Button modifier;
     
-    public static Horairee h = new Horairee();
+    public static Horaire h = new Horaire();
     public static Anonce a = new Anonce();
 	
 	  @FXML

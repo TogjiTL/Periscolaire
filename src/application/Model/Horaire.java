@@ -3,7 +3,7 @@ package application.Model;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Horairee {
+public class Horaire {
 	
 	static ArrayList Heure = new ArrayList<>(Arrays.asList(
 	    		"10h - 12h  /  14h - 16h",
@@ -14,7 +14,7 @@ public class Horairee {
 	    		"10h - 12h",
 	    		"Fermé"));
 	   
-	   public Horairee(){
+	   public Horaire(){
 		   
 	   }
 

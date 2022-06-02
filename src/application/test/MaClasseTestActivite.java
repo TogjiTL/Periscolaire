@@ -16,8 +16,8 @@ public class MaClasseTestActivite extends TestCase {
 		public void setUp() {
 			
 			String nom = "Tennis";
-			String prix = "10";
-			String capacite = "4";
+			int prix = 10;
+			int capacite = 4;
 			
 			a = new Activite(nom,prix,capacite);
 			
